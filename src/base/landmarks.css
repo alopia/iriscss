@@ -1,0 +1,25 @@
+/**
+ * Landmarks
+ *
+ * Body, the page level header, main and footer, and sections.
+ */
+body {
+  width: 100%;
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+/* A plain div between body and the landmarks is an app's mount root, such as #app */
+body > header,
+body > main,
+body > footer,
+:where(body > div:not([class])) > :is(header, main, footer) {
+  padding-block: var(--i-section-spacing-block);
+}
+
+section {
+  margin-bottom: var(--i-section-spacing-block);
+}
